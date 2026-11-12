@@ -1,0 +1,83 @@
+/* Главное окно (адаптировано под normal_window=true) */
+window {
+    margin: 0px;
+    border: 2px solid #444444;
+    border-radius: 12px;
+    background-color: #1c1c1c;
+    font-family: "JetBrains Mono", "Noto Sans", sans-serif;
+    font-size: 14px;
+}
+
+/* Основной контейнер */
+#outer-box {
+    padding: 15px;
+    border: none;
+    background-color: transparent;
+}
+
+/* Строка ввода */
+#input {
+    margin-bottom: 15px;
+    border: 1px solid #3a3a3a;
+    border-radius: 6px;
+    padding: 10px 14px;
+    background-color: #262626;
+    color: #e0e0e0;
+}
+
+#input:focus {
+    border: 1px solid #666666;
+    box-shadow: 0 0 4px #444444;
+}
+
+/* Контейнер списка */
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#inner-box {
+    margin: 0px;
+    border: none;
+}
+
+/* Отдельная строка (элемент списка) */
+#entry {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: transparent;
+}
+
+/* Элемент при наведении мыши */
+#entry:hover {
+    background-color: #2a2a2a;
+}
+
+/* Выбранный/активный элемент */
+#entry:selected {
+    background-color: #383838;
+}
+
+/* Текст внутри элементов */
+#text {
+    margin-left: 10px;
+    color: #aaaaaa;
+}
+
+#entry:selected #text {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Иконки приложений (для allow_images=true) */
+#img {
+    margin: 0px;
+    border: none;
+    /* Делает цветные иконки черно-белыми для полной монохромности */
+    filter: grayscale(100%) brightness(90%);
+}
+
+#entry:selected #img {
+    filter: grayscale(100%) brightness(120%);
+}
